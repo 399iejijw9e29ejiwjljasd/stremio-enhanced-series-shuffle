@@ -34,7 +34,7 @@ _Note: Not compatible with the default Stremio desktop/web/mobile/TV apps._
 
 ##  Installation (for Stremio Enhanced)
 
-1. Download the [`series-shuffle.user.js`](series-shuffle.user.js) script from the [Releases](https://github.com/YOUR_USERNAME/stremio-enhanced-series-shuffle/releases) section.  
+1. Download the [`series-shuffle.user.js`](series-shuffle.user.js) script from the [Releases](https://github.com/399iejijw9e29ejiwjljasd/stremio-enhanced-series-shuffle/releases) section.  
 2. Open **Stremio Enhanced**.  
 3. Navigate to **Settings → Enhanced → Plugins**.  
 4. Click **Load plugin from file**, then select `series-shuffle.user.js`.  
