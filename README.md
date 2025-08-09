@@ -28,7 +28,7 @@ _Note: Not compatible with the default Stremio desktop/web/mobile/TV apps._
   - Works alongside Stremio Enhanced's “Up Next” UI (but does not modify it directly)
 
 - **Session Storage**  
-  - Shuffle setting persists per series for up to 6 hours
+  - Shuffle setting persists per series for up to 24 hours
 
 ---
 
