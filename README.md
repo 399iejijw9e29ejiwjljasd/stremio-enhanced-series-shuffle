@@ -1,31 +1,95 @@
-# Stremio Series Shuffle (Stremio Enhanced Only)
+# Stremio Enhanced Series Shuffle
 
-This userscript adds **true shuffle support for episodes** in the Stremio Enhanced web client.
+**Shuffle episodes effortlessly within Stremio Enhanced — ONLY works on the Enhanced client.**
 
-> ⚠️ **Note**: This only works on the **Stremio Enhanced** web client. It will not work on the official desktop, mobile, or standard web clients.
+---
 
-## Features
-- **Shuffle Watched** or **Shuffle All** episodes from the series detail page.
-- In-player **shuffle toggle button** that disappears with the rest of the controls.
-- **Randomized auto-play** for the next episode when shuffle is enabled.
-- Works with **Up Next** overlay (when Stremio Enhanced is used).
-- Session persists for up to 6 hours.
+## Description
 
-## Installation
-1. Install a userscript manager like **Tampermonkey** or **Violentmonkey** in your browser.
-2. Download and install the [`series-shuffle.user.js`](series-shuffle.user.js) script.
-3. Open Stremio Enhanced and enjoy.
+Adds a **Shuffle Watched / Shuffle All** experience to Stremio Enhanced, complete with a sleek **Shuffle Next** toggle inside the player controls and fully randomized autoplay.
 
-## Usage
-- On the series page, click **Shuffle Watched** or **Shuffle All** to start.
-- Inside the player, toggle the shuffle button (bottom control bar) on/off to control randomized next episode playback.
+_Note: Not compatible with the default Stremio desktop/web/mobile/TV apps._
 
-## Screenshots
-![Shuffle Buttons](screenshots/shuffle-buttons.png)
-![Shuffle Icon in Player](screenshots/shuffle-icon.png)
+---
 
-## Changelog
-See [CHANGELOG.md](CHANGELOG.md).
+##  Features
+
+- **Series Page Controls**  
+  - Shuffle only watched episodes  
+  - Shuffle all episodes (watched or not)
+
+- **In-Player Shuffle Toggle**  
+  - Appears in the player control bar (fades with UI)  
+  - Enables randomized autoplay for the next episode  
+  - Toggleable mid-session — retains per-series shuffle mode
+
+- **Autoplay Behavior**  
+  - Truly random episode selection when shuffle is on  
+  - Works alongside Stremio Enhanced's “Up Next” UI (but does not modify it directly)
+
+- **Session Storage**  
+  - Shuffle setting persists per series for up to 6 hours
+
+---
+
+##  Installation (for Stremio Enhanced)
+
+1. Download the [`series-shuffle.user.js`](series-shuffle.user.js) script from the [Releases](https://github.com/YOUR_USERNAME/stremio-enhanced-series-shuffle/releases) section.  
+2. Open **Stremio Enhanced**.  
+3. Navigate to **Settings → Enhanced → Plugins**.  
+4. Click **Load plugin from file**, then select `series-shuffle.user.js`.  
+5. Ensure the plugin is enabled.
+
+---
+
+##  Usage
+
+- **Series Page**  
+  - Click **Shuffle Watched** or **Shuffle All** to begin.
+
+- **Player**  
+  - Click the **shuffle icon** in the control bar to enable/disable next-episode shuffling.
+
+---
+
+##  Screenshots
+
+| Series Page Shuffle Controls | Shuffle Toggle in Player Bar |
+|------------------------------|-------------------------------|
+| ![Shuffle Buttons](screenshots/shuffle-buttons.png) | ![Shuffle Icon](screenshots/shuffle-icon.png) |
+
+---
+
+##  Changelog
+
+See [CHANGELOG.md](CHANGELOG.md) for version history.
+
+---
+
+##  Troubleshooting
+
+- **“No episodes to shuffle”**  
+  Occurs if episode metadata isn't loaded. Try navigating to the series detail page again or use a different source.
+
+- **Shuffle icon misaligned or not visible**  
+  Verify you are using **Stremio Enhanced**, not the official client.
+
+- **Next episode still sequential?**  
+  Ensure shuffle is turned **ON** via the icon; autoplay will shuffle correctly thereafter.
+
+---
+
+##  Contributing
+
+- Found an issue? Open an [Issue](https://github.com/399iejijw9e29ejiwjljasd/stremio-enhanced-series-shuffle/issues).  
+- Want to contribute? Pull requests are welcome!
+
+---
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+This project is licensed under the **MIT License** — see [LICENSE](LICENSE) for details.
+
+---
+
+*Made with ♥ for Stremio Enhanced users.*
