@@ -1,7 +1,7 @@
 /**
- * @id         stermio-enhanced-series-shuffle
+ * @id         stremio-enhanced-series-shuffle
  * @name       Stremio Enhanced Series Shuffle
- * @version    5.4.0
+ * @version    5.4.1
  * @description Series-page Shuffle Watched/All + Player icon + real shuffled autoplay (no Up-Next DOM changes).
  */
 
@@ -15,7 +15,7 @@
   const PLAYER_ICON_ID = 'series-shuffle-player-icon';
 
   const STORAGE_KEY = 'series-shuffle-session';   // { seriesId, variant, pool{seriesId,list[]}, last, plannedNext, exp }
-  const MODE_TTL_MS = 6 * 60 * 60 * 1000;
+  const MODE_TTL_MS = 24 * 60 * 60 * 1000;        // ⬅ 24 hours (was 6 hours)
 
   const log = (...a) => DEBUG && console.log('[SeriesShuffle]', ...a);
   const onSeriesPage = () => /#\/detail\/series\//.test(location.hash);
@@ -231,7 +231,6 @@
   function buildPlayerIcon(){
     const btn=document.createElement('button');
     btn.id=PLAYER_ICON_ID;
-    // match SkipIntro’s styling: small button with padding only, let flex center it
     Object.assign(btn.style,{
       padding:'6px', border:'none', borderRadius:'4px', cursor:'pointer',
       background:'transparent'
@@ -275,7 +274,7 @@
         toast('Shuffle Next enabled'); paintIcon(icon,true);
       };
 
-      // mimic SkipIntro: put our button at the **start** of the bar
+      // place at start of bar (aligns like other plugin icons)
       bar.prepend(icon);
     }
     paintIcon(icon, !!readSession());
