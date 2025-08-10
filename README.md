@@ -115,5 +115,3 @@ This project is licensed under the **MIT License** — see [LICENSE](LICENSE) fo
 *Made with ♥ for Stremio Enhanced users.*
 
 ---
-
-If you want, I can also **sync this README with your CHANGELOG.md** so both reflect the English language preference and playback fixes. That would make the update history clearer.
