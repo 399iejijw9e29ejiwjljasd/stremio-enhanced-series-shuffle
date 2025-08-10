@@ -6,83 +6,103 @@
 
 ## Description
 
-Adds a **Shuffle Watched / Shuffle All** experience to Stremio Enhanced, complete with a sleek **Shuffle Next** toggle inside the player controls and fully randomized autoplay.
+Adds a **Shuffle Watched / Shuffle All** experience to Stremio Enhanced, complete with a sleek **Shuffle Next** toggle inside the player controls, fully randomized autoplay, **language-aware stream selection**, and playback stability improvements.
 
-_Note: Not compatible with the default Stremio desktop/web/mobile/TV apps._
-
----
-
-##  Features
-
-- **Series Page Controls**  
-  - Shuffle only watched episodes  
-  - Shuffle all episodes (watched or not)
-
-- **In-Player Shuffle Toggle**  
-  - Appears in the player control bar (fades with UI)  
-  - Enables randomized autoplay for the next episode  
-  - Toggleable mid-session — retains per-series shuffle mode
-
-- **Autoplay Behavior**  
-  - Truly random episode selection when shuffle is on  
-  - Works alongside Stremio Enhanced's “Up Next” UI (but does not modify it directly)
-
-- **Session Storage**  
-  - Shuffle setting persists per series for up to 24 hours
+*Note: Not compatible with the default Stremio desktop/web/mobile/TV apps.*
 
 ---
 
-##  Installation (for Stremio Enhanced)
+## Features
 
-1. Download the [`series-shuffle.user.js`](series-shuffle.user.js) script from the [Releases](https://github.com/399iejijw9e29ejiwjljasd/stremio-enhanced-series-shuffle/releases) section.  
-2. Open **Stremio Enhanced**.  
-3. Navigate to **Settings → Enhanced → Plugins**.  
-4. Click **Load plugin from file**, then select `series-shuffle.user.js`.  
+* **Series Page Controls**
+
+  * Shuffle only watched episodes
+  * Shuffle all episodes (watched or not)
+
+* **In-Player Shuffle Toggle**
+
+  * Appears in the player control bar (fades with UI)
+  * Enables randomized autoplay for the next episode
+  * Toggleable mid-session — retains per-series shuffle mode
+
+* **Autoplay Behavior**
+
+  * Truly random episode selection when shuffle is on
+  * Works alongside Stremio Enhanced's “Up Next” UI (but does not modify it directly)
+  * **Respects user’s preferred language setting (defaults to English if not set)**
+  * Prevents runaway skipping before episodes start playing
+  * Adds loading delay handling for slower streams (\~10s buffer before playback start)
+
+* **Navigation Improvements**
+
+  * When exiting playback, returns directly to the series detail page
+  * Avoids having to click “Back” through all shuffled episodes
+
+* **Session Storage**
+
+  * Shuffle setting persists per series for up to 24 hours
+
+---
+
+## Installation (for Stremio Enhanced)
+
+1. Download the [`series-shuffle.user.js`](series-shuffle.user.js) script from the [Releases](https://github.com/399iejijw9e29ejiwjljasd/stremio-enhanced-series-shuffle/releases) section.
+2. Open **Stremio Enhanced**.
+3. Navigate to **Settings → Enhanced → Plugins**.
+4. Click **Load plugin from file**, then select `series-shuffle.user.js`.
 5. Ensure the plugin is enabled.
 
 ---
 
-##  Usage
+## Usage
 
-- **Series Page**  
-  - Click **Shuffle Watched** or **Shuffle All** to begin.
+* **Series Page**
 
-- **Player**  
-  - Click the **shuffle icon** in the control bar to enable/disable next-episode shuffling.
+  * Click **Shuffle Watched** or **Shuffle All** to begin.
+
+* **Player**
+
+  * Click the **shuffle icon** in the control bar to enable/disable next-episode shuffling.
 
 ---
 
-##  Screenshots
+## Screenshots
 
-| Series Page Shuffle Controls | Shuffle Toggle in Player Bar |
-|------------------------------|-------------------------------|
+| Series Page Shuffle Controls                        | Shuffle Toggle in Player Bar                  |
+| --------------------------------------------------- | --------------------------------------------- |
 | ![Shuffle Buttons](screenshots/shuffle-buttons.png) | ![Shuffle Icon](screenshots/shuffle-icon.png) |
 
 ---
 
-##  Changelog
+## Changelog
 
 See [CHANGELOG.md](CHANGELOG.md) for version history.
 
 ---
 
-##  Troubleshooting
+## Troubleshooting
 
-- **“No episodes to shuffle”**  
+* **“No episodes to shuffle”**
   Occurs if episode metadata isn't loaded. Try navigating to the series detail page again or use a different source.
 
-- **Shuffle icon misaligned or not visible**  
+* **Wrong audio language**
+  Ensure your preferred language is set in Stremio Enhanced settings; the plugin will prioritize it (English if unset).
+
+* **Episodes skip instantly without playing**
+  Fixed in this version — ensure you’ve updated the plugin. Skips now only occur after playback has started.
+
+* **Shuffle icon misaligned or not visible**
   Verify you are using **Stremio Enhanced**, not the official client.
 
-- **Next episode still sequential?**  
+* **Next episode still sequential?**
   Ensure shuffle is turned **ON** via the icon; autoplay will shuffle correctly thereafter.
 
 ---
 
-##  Contributing
+## Contributing
 
-- Found an issue? Open an [Issue](https://github.com/399iejijw9e29ejiwjljasd/stremio-enhanced-series-shuffle/issues).  
-- Want to contribute? Pull requests are welcome!
+* Found an issue? Open an [Issue](https://github.com/399iejijw9e29ejiwjljasd/stremio-enhanced-series-shuffle/issues).
+* Want to contribute? Pull requests are welcome!
 
 ---
 
@@ -93,3 +113,7 @@ This project is licensed under the **MIT License** — see [LICENSE](LICENSE) fo
 ---
 
 *Made with ♥ for Stremio Enhanced users.*
+
+---
+
+If you want, I can also **sync this README with your CHANGELOG.md** so both reflect the English language preference and playback fixes. That would make the update history clearer.
